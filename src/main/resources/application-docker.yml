@@ -1,0 +1,44 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/courier_tracking
+    username: postgres
+    password: G7r#x9Lq2Tz8Pw!
+
+  data:
+    redis:
+      host: redis
+      port: 6379
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate.format_sql: true
+      hibernate.default_schema: couriertracking
+      hibernate.jdbc.time_zone: UTC
+
+  jackson:
+    time-zone: UTC
+
+  flyway:
+    enabled: true
+    schemas: couriertracking
+    default-schema: couriertracking
+    create-schemas: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+
+app:
+  geo:
+    radius-meters: 100
+  dedup:
+    entrance-ttl-seconds: 60
+    client-window-seconds: 60
+  locks:
+    per-courier-ttl-seconds: 15
+  last-location:
+    ttl-seconds: 86400

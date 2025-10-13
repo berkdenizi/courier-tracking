@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:couriertracking;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;INIT=CREATE SCHEMA IF NOT EXISTS couriertracking\;SET SCHEMA couriertracking
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+    properties:
+      hibernate.dialect: org.hibernate.dialect.H2Dialect
+      hibernate.default_schema: couriertracking
+      hibernate.format_sql: true
+      hibernate.jdbc.time_zone: UTC
+
+  flyway:
+    enabled: false
+
+  jackson:
+    time-zone: UTC
+
+  messages:
+    basename: messages
