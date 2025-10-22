@@ -16,7 +16,7 @@ public class TrPhoneValidator implements ConstraintValidator<TrPhone, String> {
     @Override
     public boolean isValid(String value, ConstraintValidatorContext ctx) {
         if (value == null || value.trim().isEmpty()) {
-            return !required; // required=false ise boş geçilebilir
+            return !required;
         }
         return value.matches(PHONE_REGEX);
     }

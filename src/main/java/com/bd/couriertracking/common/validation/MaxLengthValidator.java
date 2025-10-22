@@ -13,7 +13,7 @@ public class MaxLengthValidator implements ConstraintValidator<MaxLength, String
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext ctx) {
-        if (value == null) return true; // Required ayrı kontrol eder
+        if (value == null) return true;
         return value.length() <= max;
     }
 }

@@ -13,7 +13,7 @@ import java.lang.annotation.*;
 public @interface Tckn {
     String message() default "{msg.tckn.invalid}";
 
-    boolean required() default true; // <--- fark burada
+    boolean required() default true;
 
     Class<?>[] groups() default {};
 

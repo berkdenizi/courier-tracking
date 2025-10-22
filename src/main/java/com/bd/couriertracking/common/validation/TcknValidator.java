@@ -15,7 +15,7 @@ public class TcknValidator implements ConstraintValidator<Tckn, String> {
     @Override
     public boolean isValid(String t, ConstraintValidatorContext ctx) {
         if (t == null || t.trim().isEmpty()) {
-            return !required; // required=false ise boş geçilebilir
+            return !required;
         }
         t = t.trim();
         if (t.length() != 11) return false;
