@@ -13,7 +13,6 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      # <-- Burada kullanıcı postgres olmalı (env'de postgres set ettin)
       test: ["CMD-SHELL", "pg_isready -U postgres -d courier_tracking"]
       interval: 5s
       timeout: 3s
