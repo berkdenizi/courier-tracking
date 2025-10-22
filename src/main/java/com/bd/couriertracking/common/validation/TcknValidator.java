@@ -1,4 +1,3 @@
-// com.bd.couriertracking.common.validation.TcknValidator.java
 package com.bd.couriertracking.common.validation;
 
 import jakarta.validation.ConstraintValidator;
